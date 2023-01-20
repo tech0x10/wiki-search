@@ -1,0 +1,7 @@
+<form (submit)="onsubmit($any($event))">
+    <input type="text" (input)="tobesearched=($any($event.target).value)" class="input" style="width:30%" placeholder="Search">
+    <button type="submit" class="button is-info">
+        Search
+</button>
+
+</form>

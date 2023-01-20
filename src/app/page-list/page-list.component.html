@@ -1,0 +1,17 @@
+<table class="table is-striped" *ngIf="results.length">
+    <thead>
+        <th>Title</th>
+        <th>Wordcount</th>
+        <th>Summary</th>
+    </thead>
+    <tbody>
+        <ng-container *ngIf="results">
+            <tr *ngFor="let result of results">
+                <td>{{result.title}} </td>
+                <td>{{result.wordcount}} </td>
+                <td [innerHTML]="result.snippet">
+                    {{result.snippet}} </td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
